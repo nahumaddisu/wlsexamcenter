@@ -798,3 +798,36 @@ footer p {
         font-size: 16px;
     }
 }
+.creators-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.creator-card {
+    flex: 1;
+    max-width: 350px;
+}
+
+.creator-photo-card {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator-photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}.creator-photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    border-radius: 10px;
+}
