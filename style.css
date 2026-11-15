@@ -632,9 +632,28 @@ nav ul li a:hover {
     align-items: stretch;
 }
 
-/* =================================
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+#about {
+    padding: 80px 5%;
+}
+
+#about .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    align-items: stretch;
+}
+
+
+/* =========================================
    CREATOR PROFILE CARD
-================================= */
+========================================= */
 
 #about .about-creator-card {
     display: flex;
@@ -697,9 +716,9 @@ nav ul li a:hover {
 }
 
 
-/* =================================
+/* =========================================
    LINKEDIN SOCIAL ICON
-================================= */
+========================================= */
 
 #about .creator-socials {
     display: flex;
@@ -731,9 +750,9 @@ nav ul li a:hover {
 }
 
 
-/* =================================
+/* =========================================
    TEACHER ACKNOWLEDGEMENT
-================================= */
+========================================= */
 
 #about .teacher-acknowledgement {
     padding: 25px;
@@ -807,9 +826,9 @@ nav ul li a:hover {
 }
 
 
-/* =================================
+/* =========================================
    CLOSING BANNER
-================================= */
+========================================= */
 
 #about .about-closing-banner {
     display: flex;
@@ -864,9 +883,9 @@ nav ul li a:hover {
 }
 
 
-/* =================================
+/* =========================================
    SCHOOL NAME
-================================= */
+========================================= */
 
 #about .school-name {
     text-align: center;
@@ -876,9 +895,45 @@ nav ul li a:hover {
 }
 
 
-/* =================================
-   RESPONSIVE DESIGN
-================================= */
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #030814;
+    color: var(--text);
+    text-align: center;
+    padding: 40px 15px;
+    border-top: 1px solid var(--border);
+}
+
+footer h3 {
+    color: var(--white);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-line {
+    height: 1px;
+    background: var(--border);
+    margin: 25px auto;
+    max-width: 700px;
+}
+
+.copyright {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
 
 @media (max-width: 1000px) {
 
@@ -891,6 +946,93 @@ nav ul li a:hover {
     }
 
 }
+
+
+/* =========================================
+   GENERAL RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    #home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .roles-container,
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technology-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   SMALL TABLETS
+========================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 7%;
+    }
+
+    header {
+        padding: 16px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home h1 {
+        font-size: 44px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    #demo {
+        padding: 70px 5%;
+    }
+
+    #demo .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .video-container {
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -941,121 +1083,6 @@ nav ul li a:hover {
         font-size: 50px;
     }
 
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    background: #030814;
-    color: var(--text);
-    text-align: center;
-    padding: 40px 15px;
-    border-top: 1px solid var(--border);
-}
-
-footer h3 {
-    color: var(--white);
-    font-size: 23px;
-    margin-bottom: 12px;
-}
-
-footer p {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.footer-line {
-    height: 1px;
-    background: var(--border);
-    margin: 25px auto;
-    max-width: 700px;
-}
-
-.copyright {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 900px) {
-
-    #home {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .hero-visual {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .roles-container,
-    .features-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .technology-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-
-    section {
-        padding: 65px 7%;
-    }
-
-    header {
-        padding: 16px 5%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    #home h1 {
-        font-size: 44px;
-    }
-
-    .section-heading h2 {
-        font-size: 29px;
-    }
-
-    #demo {
-        padding: 70px 5%;
-    }
-
-    #demo .section-heading h2 {
-        font-size: 29px;
-    }
-
-    .video-container {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-
     .roles-container,
     .features-container,
     .technology-container,
@@ -1076,37 +1103,6 @@ footer p {
     .hero-description {
         font-size: 16px;
     }
-}
-.creators-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    flex-wrap: wrap;
+
 }
 
-.creator-card {
-    flex: 1;
-    max-width: 350px;
-}
-
-.creator-photo-card {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.creator-photo-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}.creator-photo-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1.08);
-    border-radius: 10px;
-}
