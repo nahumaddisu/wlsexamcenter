@@ -612,56 +612,335 @@ nav ul li a:hover {
 }
 
 
-/* =========================================
-   ABOUT / CREATORS
-========================================= */
+
+/* =================================
+   ABOUT SECTION
+================================= */
 
 #about {
-    background: var(--background);
-    text-align: center;
+    padding: 80px 5%;
 }
 
-.creators-container {
+/* MAIN LAYOUT */
+
+#about .about-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 800px;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    align-items: stretch;
 }
 
-.creator-card {
-    background: var(--card);
-    padding: 35px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
+/* =================================
+   CREATOR PROFILE CARD
+================================= */
+
+#about .about-creator-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #0b152b;
+    border: 1px solid #1e3a5f;
+    border-radius: 22px;
     transition: 0.3s ease;
 }
 
-.creator-card:hover {
+#about .about-creator-card:hover {
+    border-color: #38bdf8;
     transform: translateY(-5px);
-    border-color: var(--blue-light);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.creator-number {
-    color: var(--blue-light);
-    font-size: 14px;
-    margin-bottom: 20px;
+#about .about-creator-image {
+    flex: 0 0 45%;
+    height: 290px;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
-.creator-card h3 {
-    color: var(--white);
-    font-size: 22px;
+#about .about-creator-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+#about .about-creator-card:hover .about-creator-image img {
+    transform: scale(1.06);
+}
+
+#about .about-creator-info {
+    flex: 1;
+    min-width: 0;
+}
+
+#about .about-creator-info h3,
+#about .teacher-info h3 {
+    color: #ffffff;
+    font-size: 23px;
     margin-bottom: 8px;
 }
 
-.creator-card p {
-    color: var(--muted);
+#about .about-role {
+    color: #a78bfa;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 18px;
 }
 
-.school-name {
-    margin-top: 35px;
-    color: var(--blue-soft);
+#about .about-description {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   LINKEDIN SOCIAL ICON
+================================= */
+
+#about .creator-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+#about .creator-socials a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #172440;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#about .creator-socials svg {
+    width: 23px;
+    height: 23px;
+}
+
+#about .creator-socials a:hover {
+    background: #0a66c2;
+    transform: translateY(-5px);
+}
+
+
+/* =================================
+   TEACHER ACKNOWLEDGEMENT
+================================= */
+
+#about .teacher-acknowledgement {
+    padding: 25px;
+    background: linear-gradient(145deg, #10152e, #0b152b);
+    border: 1.5px solid #9470ff;
+    border-radius: 22px;
+    box-shadow: 0 0 22px rgba(147, 112, 255, 0.12);
+    transition: 0.3s ease;
+}
+
+#about .teacher-acknowledgement:hover {
+    box-shadow: 0 0 28px rgba(147, 112, 255, 0.22);
+}
+
+#about .acknowledgement-heading {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+#about .acknowledgement-star {
+    color: #a78bfa;
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+#about .teacher-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+#about .teacher-image {
+    flex: 0 0 165px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#about .teacher-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#about .teacher-info {
+    flex: 1;
+    min-width: 0;
+}
+
+#about .teacher-info h3 {
+    margin-top: 0;
+}
+
+#about .teacher-info p:not(.about-role) {
+    color: #cbd5e1;
+    font-size: 13.5px;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+#about .teacher-thanks {
+    color: #a78bfa;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #39305e;
+}
+
+
+/* =================================
+   CLOSING BANNER
+================================= */
+
+#about .about-closing-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 35px;
+    margin: 55px auto 30px;
+    max-width: 1200px;
+    border: 1px solid #7655e8;
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            #4933a8,
+            transparent 35%
+        ),
+        linear-gradient(
+            110deg,
+            #17133e,
+            #10152e,
+            #302080
+        );
+}
+
+#about .banner-icon {
+    font-size: 65px;
+}
+
+#about .banner-content {
+    text-align: center;
+}
+
+#about .banner-content h3 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+#about .banner-content p {
+    color: #a5b4d4;
+    font-size: 15px;
+}
+
+#about .banner-line {
+    width: 65px;
+    height: 4px;
+    background: #a78bfa;
+    border-radius: 5px;
+    margin: 18px auto 0;
+}
+
+
+/* =================================
+   SCHOOL NAME
+================================= */
+
+#about .school-name {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1000px) {
+
+    #about .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #about .about-creator-card {
+        min-height: 300px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #about {
+        padding: 60px 5%;
+    }
+
+    #about .about-creator-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .about-creator-image {
+        width: 100%;
+        height: 300px;
+        flex-basis: auto;
+    }
+
+    #about .creator-socials {
+        justify-content: center;
+    }
+
+    #about .teacher-content {
+        flex-direction: column;
+    }
+
+    #about .teacher-image {
+        width: 100%;
+        height: 260px;
+        flex-basis: auto;
+    }
+
+    #about .teacher-acknowledgement {
+        padding: 20px;
+    }
+
+    #about .about-closing-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 18px;
+    }
+
+    #about .banner-content h3 {
+        font-size: 19px;
+    }
+
+    #about .banner-icon {
+        font-size: 50px;
+    }
+
 }
 
 
